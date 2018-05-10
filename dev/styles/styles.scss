@@ -56,8 +56,17 @@ select{
     padding-left: 12px;
 }
 
+select{
+    width: 40%;
+    margin-left: 10px;
+    border: 0 !important;
+    -webkit-appearance: none; 
+    -moz-appearance: none; 
+}
+
 option{
     background: #fff;
+    color: #7B7B7B;
 }
 
 input[type="text"]{
@@ -65,10 +74,6 @@ input[type="text"]{
     margin-right: 10px;
 }
 
-select{
-    width: 40%;
-    margin-left: 10px;
-}
 
 input[type="submit"]{
     background: #5c6ac4;

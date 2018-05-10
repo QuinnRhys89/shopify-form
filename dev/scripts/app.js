@@ -5,8 +5,6 @@ const form = document.getElementById("form");
 
 const regEx = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 
-// const dotsAnimation =
-
 form.addEventListener("submit", submitForm);
 
 function submitForm(e) {
@@ -16,9 +14,10 @@ function submitForm(e) {
 
   if (!regEx.test(email.value)) {
     $('#error-message').hide().html("Please enter a valid e-mail address").fadeIn();
-  } else {
+  } 
+  else {
     document.getElementById("error-message").innerHTML = " ";
-    document.getElementById("submit").value = "Submitting";
+    document.getElementById("submit").value = "Submitting...";
     document.getElementById("submit").disabled = true;
 
     setTimeout(function() {
