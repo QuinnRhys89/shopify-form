@@ -7,8 +7,74 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-	<div id="app">
+	<div class="wrapper">
+		<h1>Stay up to date with ecommerce trends with Shopify's newsletter</h1>
+
+		<div id="thankyou-container"></div>
+		<form id="form">
+			<h2>Subscribe for free marketing tips</h2>
+
+			<div class="input-container">
+				<label for="email"></label>
+				<input type="text" placeholder="Email Address" id="email">
+				<label for="interestedIn"></label>
+				<select name="interestedIn" id="interestedIn">
+					<option value="Interested in...">Interested in...</option>
+					<option value="Marketing">Marketing</option>
+				</select>
+			</div>
+			<p id="error-message"></p>
+			<label for="submit"></label>
+			<input type="submit" value="Sign up now" id="submit">
+		</form>
+
+		<div id="thankyou-msg">
+			<h2>Thanks for Subscribing</h2>
+			<p>You'll start receiving free tips and resources soon.</p>
+		</div>
 	</div>
-	<script src="/public/scripts/app.js"></script>
+
+	
+
+	<script>
+		
+	
+
+	const email = document.getElementById('email');
+	const interestedIn = document.getElementById('interestedIn');
+
+	const form = document.getElementById('form');
+
+	const regEx = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+
+	// const dotsAnimation = 
+
+	form.addEventListener("submit", submitForm);
+
+	function submitForm(e){
+		e.preventDefault();
+		console.log(email.value);
+		console.log(interestedIn.value);
+
+		
+		if (!regEx.test(email.value)){
+			document.getElementById('error-message').innerHTML = "Please enter a valid e-mail address";
+		}
+		else{
+			document.getElementById('error-message').innerHTML = "";
+			document.getElementById('submit').value = "Submitting";
+
+			setTimeout(function(){
+				form.style.display="none";
+				document.getElementById('thankyou-msg').style.display = "inline";
+			}, 2000)
+		}
+
+	}
+
+	</script>
+
+	
+
 </body>
 </html>
