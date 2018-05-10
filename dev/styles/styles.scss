@@ -22,18 +22,31 @@ body{
 .wrapper{
     margin: 0 auto;
     max-width: 1180px;
-    width: 50%;
+    width: 40%;
+    margin-top: 10vh;
 }
 
 h1{
     font-size: 24px;
     color: #fff;
+    line-height: 35px;
+}
+
+.line{
+    width: 20px;
+    height: 2px;
+    background: #7AB55C;
+    margin-bottom: 70px;
 }
 
 h2{
     font-size: 16px;
     color: #fff;
+    margin-bottom: 20px;
+    font-weight: 500;
+    letter-spacing: .5px;
 }
+
 
 input[type="text"], 
 select{
@@ -41,6 +54,10 @@ select{
     height: 52px;
     border-radius: 5px;
     padding-left: 12px;
+}
+
+option{
+    background: #fff;
 }
 
 input[type="text"]{
@@ -62,6 +79,11 @@ input[type="submit"]{
     border-radius: 5px;
     font-weight: 500;
     letter-spacing: .5px;
+    transition: 500ms ease; 
+    &:hover{
+        background: #6777e2;
+        cursor: pointer;
+    }
 }
 
 .input-container{
@@ -72,9 +94,15 @@ input[type="submit"]{
 #error-message{
     color: #C23628;
     height: 20px;
+    font-size: 14px;
+    margin: 10px 0 20px 0;
 }
 
 #thankyou-msg{
     display: none;
     color: white;
+    letter-spacing: 1px;
+    h2{
+        font-weight: 700;
+    }
 }
